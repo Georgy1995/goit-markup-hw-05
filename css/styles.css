@@ -72,7 +72,9 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   display: block;
+  position: relative;
   color: var(--main-color);
+  
 }
 .menu-link:hover{
   color: var(--secondary-color)
@@ -81,7 +83,11 @@ img {
   color: var(--secondary-color)
 }
 
-.first-menu-link:hover::after {
+.active-link{
+  color: #404bbf;
+}
+
+.active-link::after {
  display: block;
  content: "";
  border-radius: 2px;
@@ -91,56 +97,13 @@ img {
  height: 4px;
 margin-top: 20px;
 }
-.second-menu-link:hover::after {
-  display: block;
-  content: "";
-  border-radius: 2px;
-  background-color: var(--secondary-color);
-  position: absolute;
+
+.second-menu-link::after{
   width: 66px;
-  height: 4px;
- margin-top: 20px;
- }
- .third-menu-link:hover::after {
-  display: block;
-  content: "";
-  border-radius: 2px;
-  background-color: var(--secondary-color);
-  position: absolute;
+}
+.third-menu-link::after {
   width: 67px;
-  height: 4px;
- margin-top: 20px;
- }
- .first-menu-link:focus::after {
-  display: block;
-  content: "";
-  border-radius: 2px;
-  background-color: var(--secondary-color);
-  position: absolute;
-  width: 48px;
-  height: 4px;
- margin-top: 20px;
- }
- .second-menu-link:focus::after {
-   display: block;
-   content: "";
-   border-radius: 2px;
-   background-color: var(--secondary-color);
-   position: absolute;
-   width: 66px;
-   height: 4px;
-  margin-top: 20px;
-  }
-  .third-menu-link:focus::after {
-   display: block;
-   content: "";
-   border-radius: 2px;
-   background-color: var(--secondary-color);
-   position: absolute;
-   width: 67px;
-   height: 4px;
-  margin-top: 20px;
-  }
+}
 
 .address {
   font-style: normal;
